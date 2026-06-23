@@ -5,19 +5,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Building Code
-        run: echo "Building the code"
+        run: echo "Building the code by ${{vars.MYNAME}}"
 
   test:
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Testing
-        run: echo "Testing the code"
+        run: echo "Testing the code by ${{vars.MYNAME}}"
 
   deploy:
     runs-on: ubuntu-latest
     needs: test
     steps:
       - name: Deployment
-        run: echo "Deploy the code"
+        run: echo "Deploy the code for my dream ${{secrets.MYDREAM}}"
     
