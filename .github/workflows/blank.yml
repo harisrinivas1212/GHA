@@ -19,5 +19,5 @@ jobs:
     needs: test
     steps:
       - name: Deployment
-        run: echo "Deploy the code for my dream ${{secrets.MYDREAM}}"
+        run: echo "Deploy the code for my dream ${{secrets.MYSECRET}}"
     
